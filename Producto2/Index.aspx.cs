@@ -25,7 +25,7 @@ namespace Producto2
                 Label3.Text = Sw.name();
                 Label4.Text = Sw.supplier().ToString();
                 Label5.Text = Sw.categoryid().ToString();
-                Label6.Text = Sw.quantityUnit().ToString();
+                Label6.Text = Sw.quantityUnit();
                 Label7.Text = Sw.unitPrice().ToString();
                 Label8.Text = Sw.unitStore().ToString();
                 Label9.Text = Sw.unitOrder().ToString();

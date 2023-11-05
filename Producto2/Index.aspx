@@ -4,9 +4,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <!--Escribir aquí -->
     <h1 align="center">Productos</h1>
-    <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
     <!-- Se deberán visualizar los primeros 40 productos-->
-    <div class="container mt-5">
+    <div class="container mt-5 content-container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
                 <div class="card">
