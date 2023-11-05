@@ -44,6 +44,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -85,6 +89,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Estilos\Estilos.css" />
     <Content Include="Global.asax" />
+    <Content Include="Imagenes\icono.jfif" />
     <Content Include="Index.aspx" />
     <Content Include="Paginas\CategoriaProd.aspx" />
     <Content Include="Paginas\Paises.aspx" />
@@ -109,6 +114,8 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\Helper.cs" />
+    <Compile Include="Models\Productos.cs" />
     <Compile Include="Paginas\CategoriaProd.aspx.cs">
       <DependentUpon>CategoriaProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -276,7 +283,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

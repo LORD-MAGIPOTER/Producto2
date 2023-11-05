@@ -57,3 +57,5 @@ D:\csharper\Producto2\Producto2\obj\Debug\Producto2.csproj.CoreCompileInputs.cac
 D:\csharper\Producto2\Producto2\obj\Debug\Producto2.csproj.CopyComplete
 D:\csharper\Producto2\Producto2\obj\Debug\Producto2.dll
 D:\csharper\Producto2\Producto2\obj\Debug\Producto2.pdb
+D:\csharper\Producto2\Producto2\bin\Newtonsoft.Json.dll
+D:\csharper\Producto2\Producto2\bin\Newtonsoft.Json.xml
