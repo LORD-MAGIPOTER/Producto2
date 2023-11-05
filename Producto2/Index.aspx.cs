@@ -19,18 +19,11 @@ namespace Producto2
 
         protected async void Page_Load(object sender, EventArgs e)
         {
-            try {
+            try
+            {
                 await Sw.ObtenerDatosProductosAsync();
-                Label2.Text = Sw.productoID().ToString();
-                Label3.Text = Sw.name();
-                Label4.Text = Sw.supplier().ToString();
-                Label5.Text = Sw.categoryid().ToString();
-                Label6.Text = Sw.quantityUnit();
-                Label7.Text = Sw.unitPrice().ToString();
-                Label8.Text = Sw.unitStore().ToString();
-                Label9.Text = Sw.unitOrder().ToString();
-                Label10.Text = Sw.RecorderLevel().ToString();
-                Label11.Text = Sw.discontinued().ToString();
+                GridView1.DataSource = Sw.GenerarListaProductos();
+                GridView1.DataBind();
             }
             catch (Exception)
             {

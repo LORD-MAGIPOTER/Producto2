@@ -10,7 +10,7 @@ namespace Producto2.Models
 {
     public class Helper
     {
-        Productos Productos;
+        Products Producto;
         public string Error { get; set; }
         string DirBase;
 
@@ -38,7 +38,7 @@ namespace Producto2.Models
                     if (respuesta.IsSuccessStatusCode)
                     {
                         var jsoncadena = await respuesta.Content.ReadAsStringAsync();
-                        Productos = JsonConvert.DeserializeObject<Productos>(jsoncadena);
+                        Producto = JsonConvert.DeserializeObject<Products>(jsoncadena);
                     }
                     else
                     {
@@ -51,45 +51,30 @@ namespace Producto2.Models
                 Error = ex.Message;
             }
         }
-        public int productoID() {
-            return Productos.productoid;
-        }
-        public string name()
+        List<DataProductos_> ListProductos = new List<DataProductos_>();
+
+        public List<DataProductos_> GenerarListaProductos()
         {
-            return Productos.name;
+            for (int n = 0; n <= 39; ++n)
+            {
+                DataProductos_ Dp = new DataProductos_
+                {
+                    productoid = Producto.ProductosDatos[n].productoid,
+                    name = Producto.ProductosDatos[n].name,
+                    supplier = Producto.ProductosDatos[n].supplier,
+                    categoryID = Producto.ProductosDatos[n].categoryID,
+                    quantityUnit = Producto.ProductosDatos[n].quantityUnit,
+                    unitPrice = Producto.ProductosDatos[n].unitPrice,
+                    unitStock = Producto.ProductosDatos[n].unitStock,
+                    unitOrder = Producto.ProductosDatos[n].unitOrder,
+                    ReorderLevel = Producto.ProductosDatos[n].ReorderLevel,
+                    discontinued = Producto.ProductosDatos[n].discontinued
+                };
+                ListProductos.Add(Dp);
+            }
+            return ListProductos;
         }
-        public int supplier()
-        {
-            return Productos.supplier;
-        }
-        public int categoryid()
-        {
-            return Productos.categoryID;
-        }
-        public string quantityUnit()
-        {
-            return Productos.quantityUnit;
-        }
-        public int unitPrice()
-        {
-            return Productos.unitPrice;
-        }
-        public int unitStore()
-        {
-            return Productos.unitStore;
-        }
-        public int unitOrder()
-        {
-            return Productos.unitOrder;
-        }
-        public int RecorderLevel()
-        {
-            return Productos.RecorderLevel;
-        }
-        public int discontinued()
-        {
-            return Productos.discontinued;
-        }
+        
 
     }
 }

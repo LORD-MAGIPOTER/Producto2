@@ -115,7 +115,7 @@
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Models\Helper.cs" />
-    <Compile Include="Models\Productos.cs" />
+    <Compile Include="Models\Products.cs" />
     <Compile Include="Paginas\CategoriaProd.aspx.cs">
       <DependentUpon>CategoriaProd.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
