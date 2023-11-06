@@ -7,7 +7,7 @@ namespace Producto2.Models
 {
     public class Products
     {
-        public DataProductos_[] ProductosDatos { get; set; }
+        public DataProductos_[] Productos { get; set; }
     }
     public class DataProductos_ { 
         public int ProductID { get; set; }
@@ -15,7 +15,7 @@ namespace Producto2.Models
         public int SupplierID { get; set; }
         public int CategoryID { get; set; }
         public string QuantityPerUnit { get; set; }
-        public int UnitPrice { get; set; }
+        public decimal UnitPrice { get; set; }
         public int UnitsInStock { get; set; }
         public int UnitsOnOrder { get; set;}
         public int ReorderLevel { get; set;}

@@ -61,16 +61,16 @@ namespace Producto2.Models
             {
                 DataProductos_ Dp = new DataProductos_
                 {
-                    ProductID = Producto.ProductosDatos[n].ProductID,
-                    ProductName = Producto.ProductosDatos[n].ProductName,
-                    SupplierID = Producto.ProductosDatos[n].SupplierID,
-                    CategoryID = Producto.ProductosDatos[n].CategoryID,
-                    QuantityPerUnit = Producto.ProductosDatos[n].QuantityPerUnit,
-                    UnitPrice = Producto.ProductosDatos[n].UnitPrice,
-                    UnitsInStock = Producto.ProductosDatos[n].UnitsInStock,
-                    UnitsOnOrder = Producto.ProductosDatos[n].UnitsInStock,
-                    ReorderLevel = Producto.ProductosDatos[n].ReorderLevel,
-                    Discontinued = Producto.ProductosDatos[n].Discontinued
+                    ProductID = Producto.Productos[n].ProductID,
+                    ProductName = Producto.Productos[n].ProductName,
+                    SupplierID = Producto.Productos[n].SupplierID,
+                    CategoryID = Producto.Productos[n].CategoryID,
+                    QuantityPerUnit = Producto.Productos[n].QuantityPerUnit,
+                    UnitPrice = Producto.Productos[n].UnitPrice,
+                    UnitsInStock = Producto.Productos[n].UnitsInStock,
+                    UnitsOnOrder = Producto.Productos[n].UnitsInStock,
+                    ReorderLevel = Producto.Productos[n].ReorderLevel,
+                    Discontinued = Producto.Productos[n].Discontinued
                 };
                 ListProductos.Add(Dp);
             }
