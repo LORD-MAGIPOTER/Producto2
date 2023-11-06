@@ -35,6 +35,7 @@ namespace Producto2.Models
 
                     HttpResponseMessage respuesta = await Cliente.GetAsync($"{SolicitudClienteURI}");
                     respuesta.EnsureSuccessStatusCode();
+
                     if (respuesta.IsSuccessStatusCode)
                     {
                         var jsoncadena = await respuesta.Content.ReadAsStringAsync();
@@ -55,25 +56,26 @@ namespace Producto2.Models
 
         public List<DataProductos_> GenerarListaProductos()
         {
-            for (int n = 0; n <= 39; ++n)
+            for (int n = 0; n < 40; n++)
             {
                 DataProductos_ Dp = new DataProductos_
                 {
-                    productoid = Producto.ProductosDatos[n].productoid,
-                    name = Producto.ProductosDatos[n].name,
-                    supplier = Producto.ProductosDatos[n].supplier,
-                    categoryID = Producto.ProductosDatos[n].categoryID,
-                    quantityUnit = Producto.ProductosDatos[n].quantityUnit,
-                    unitPrice = Producto.ProductosDatos[n].unitPrice,
-                    unitStock = Producto.ProductosDatos[n].unitStock,
-                    unitOrder = Producto.ProductosDatos[n].unitOrder,
+                    ProductID = Producto.ProductosDatos[n].ProductID,
+                    ProductName = Producto.ProductosDatos[n].ProductName,
+                    SupplierID = Producto.ProductosDatos[n].SupplierID,
+                    CategoryID = Producto.ProductosDatos[n].CategoryID,
+                    QuantityPerUnit = Producto.ProductosDatos[n].QuantityPerUnit,
+                    UnitPrice = Producto.ProductosDatos[n].UnitPrice,
+                    UnitsInStock = Producto.ProductosDatos[n].UnitsInStock,
+                    UnitsOnOrder = Producto.ProductosDatos[n].UnitsInStock,
                     ReorderLevel = Producto.ProductosDatos[n].ReorderLevel,
-                    discontinued = Producto.ProductosDatos[n].discontinued
+                    Discontinued = Producto.ProductosDatos[n].Discontinued
                 };
                 ListProductos.Add(Dp);
             }
-            return ListProductos;
+            return (ListProductos);
         }
+
         
 
     }

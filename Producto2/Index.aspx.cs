@@ -24,10 +24,11 @@ namespace Producto2
                 await Sw.ObtenerDatosProductosAsync();
                 GridView1.DataSource = Sw.GenerarListaProductos();
                 GridView1.DataBind();
+
             }
             catch (Exception)
             {
-                Label1.Text = Sw.Error;
+                Label1.Text = Sw.Error.ToString();
             }
         }
     }

@@ -18,6 +18,14 @@
         HeaderStyle-Font-Size="Large"
         HeaderStyle-Font-Italic="true"
         HeaderStyle-BorderColor="Aquamarine">
+        <Columns>
+            <asp:BoundField DataField="ProductID" HeaderText="Product ID" />
+            <asp:BoundField DataField="ProductName" HeaderText="Product Name" />
+            <asp:BoundField DataField="SupplierID" HeaderText="Supplier ID" />
+
+        </Columns>
     </asp:GridView>
+    <asp:Label ID="Label2" runat="server" Text=""></asp:Label>
+
 
 </asp:Content>

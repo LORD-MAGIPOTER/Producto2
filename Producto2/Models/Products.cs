@@ -10,15 +10,15 @@ namespace Producto2.Models
         public DataProductos_[] ProductosDatos { get; set; }
     }
     public class DataProductos_ { 
-        public int productoid { get; set; }
-        public string name { get; set; }
-        public int supplier{ get; set; }
-        public int categoryID { get; set; }
-        public string quantityUnit { get; set; }
-        public int unitPrice { get; set; }
-        public int unitStock { get; set; }
-        public int unitOrder { get; set;}
+        public int ProductID { get; set; }
+        public string ProductName { get; set; }
+        public int SupplierID { get; set; }
+        public int CategoryID { get; set; }
+        public string QuantityPerUnit { get; set; }
+        public int UnitPrice { get; set; }
+        public int UnitsInStock { get; set; }
+        public int UnitsOnOrder { get; set;}
         public int ReorderLevel { get; set;}
-        public int discontinued { get; set;}
+        public int Discontinued { get; set;}
     }
 }
