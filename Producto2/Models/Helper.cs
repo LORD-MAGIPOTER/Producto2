@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
+using static Producto2.Models.Products;
 
 namespace Producto2.Models
 {
@@ -75,8 +76,6 @@ namespace Producto2.Models
             }
             return (ListProductos);
         }
-
-        
 
     }
 }
