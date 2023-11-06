@@ -8,7 +8,7 @@
 }
 
 .content-container {
-    margin-bottom: 100px; /* Añade margen en la parte inferior para empujar el footer hacia abajo */
+    margin-top: 20px; /* Añade margen en la parte inferior para empujar el footer hacia abajo */
 }
 
 .span1 {
