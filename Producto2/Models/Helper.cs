@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-using static Producto2.Models.Products;
+
 
 namespace Producto2.Models
 {
@@ -75,6 +75,26 @@ namespace Producto2.Models
                 ListProductos.Add(Dp);
             }
             return (ListProductos);
+        }
+        //Unidades en stock DataList(Enlace cuarto)
+        public int DropStock { get; set; }
+        public List<DataProductos_> ProductosStock()
+        { 
+            for (int n = 0;n <= Producto.Productos.Length - 1;n++) {
+                if (Producto.Productos[n].UnitsInStock == DropStock)
+                {
+                    DataProductos_ Pr = new DataProductos_
+                    {
+                        ProductID = Producto.Productos[n].ProductID,
+                        ProductName = Producto.Productos[n].ProductName,
+                        SupplierID = Producto.Productos[n].SupplierID,
+                        CategoryID = Producto.Productos[n].CategoryID,
+                        UnitsInStock = Producto.Productos[n].UnitsInStock
+                    };
+                    ListProductos.Add( Pr );
+                }
+            }
+            return ListProductos;
         }
 
     }

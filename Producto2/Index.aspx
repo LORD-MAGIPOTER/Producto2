@@ -13,8 +13,8 @@
                 <div class="col">
                     <div class="table-responsive">
                         <asp:GridView ID="GridView1" runat="server"
-                            CssClass="table table-hover table-striped mt-3"
-                            HeaderStyle-BackColor="#3399ff"
+                            CssClass="table table-hover table-striped mt-3 table-bordered"
+                            HeaderStyle-BackColor="#000"
                             GridLines="Vertical"
                             Font-Size="Small"
                             HeaderStyle-ForeColor="White"
