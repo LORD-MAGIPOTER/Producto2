@@ -16,7 +16,7 @@
         <div class="col-sm-12 col-md-12 text-center bg-black border border-1 border-danger">
             <p class="text-light">Ingrese Rango de Precio a Buscar</p>
             <p class="text-light">Precio:</p><asp:TextBox ID="TextBox1" runat="server" placeholder="Mayor a: "></asp:TextBox>
-            <p class="text-light">Precio:</p> <asp:TextBox ID="TextBox2" runat="server" placeholder="Menor a: "></asp:TextBox>
+            <p class="text-light">Precio:</p> <asp:TextBox ID="TextBox2" runat="server" placeholder="Menor o igual a: "></asp:TextBox>
             <asp:Button ID="Button1" runat="server" Text="Buscar" OnClick="Button1_Click" />
         </div>
     </div>

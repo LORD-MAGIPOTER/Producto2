@@ -120,6 +120,27 @@ namespace Producto2.Models
         }
 
         //Buscar por categoría
+        public int DropCat { get; set; }
+        public List<DataProductos_> ProductosCategoria()
+        {
+            for (int n = 0; n <= Producto.Productos.Count(); n++)
+            {
+                if (Producto.Productos[n].CategoryID == DropCat)
+                {
+                    DataProductos_ Pr = new DataProductos_
+                    {
+                        ProductID = Producto.Productos[n].ProductID ,
+                        CategoryID = Producto.Productos[n].CategoryID,
+                        ProductName = Producto.Productos[n].ProductName,
+                        QuantityPerUnit = Producto.Productos[n].QuantityPerUnit,
+                        UnitPrice = Producto.Productos[n].UnitPrice
+                    };
+                ListProductos.Add( Pr );
+                }
+            }
+            return ListProductos;
+        }
+
 
     }
 }
