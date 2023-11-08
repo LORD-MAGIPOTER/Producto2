@@ -20,7 +20,7 @@ namespace Producto2.Paginas
         {
             if (!IsPostBack)
             {
-                for (int i = 1; i < 9; i++)
+                for (int i = 0; i < 9; i++)
                 {
                     DropDownList1.Items.Add(i.ToString());
                 }
@@ -31,10 +31,11 @@ namespace Producto2.Paginas
         protected async void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Sw.DropCat = Convert.ToInt32(DropDownList1.SelectedItem.ToString());
+
             try
             {
                 await Sw.ObtenerDatosProductosAsync();
-                var filteredProducts = Sw.ProductosCategoria();
+                var filteredProducts = Sw.ProdsCategoria();
 
                 // Configura el origen de datos del control GridView1 para mostrar los productos filtrados.
                 GridView1.DataSource = filteredProducts.Select(p => new

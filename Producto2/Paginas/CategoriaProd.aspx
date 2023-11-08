@@ -16,7 +16,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-12 text-center bg-black border border-1 border-danger">
                 <p class="text-light">Seleccione ID de Categoría</p>
-                <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" ></asp:DropDownList>
+                <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged"></asp:DropDownList>
             </div>
         </div>
         <hr />

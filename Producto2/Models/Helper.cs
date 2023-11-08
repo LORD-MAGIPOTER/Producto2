@@ -120,10 +120,10 @@ namespace Producto2.Models
         }
 
         //Buscar por categoría
-        public int DropCat { get; set; }
-        public List<DataProductos_> ProductosCategoria()
+        public int DropCat {get; set;}
+        public List<DataProductos_> ProdsCategoria()
         {
-            for (int n = 0; n <= Producto.Productos.Count(); n++)
+            for (int n = 0; n <= Producto.Productos.Length -1 ; n++)
             {
                 if (Producto.Productos[n].CategoryID == DropCat)
                 {
@@ -141,6 +141,7 @@ namespace Producto2.Models
             return ListProductos;
         }
 
+        //Aquí inician LAS FUNCIONES PARA EL USO DEL ENDPOINT PARA PAISES
 
     }
 }
