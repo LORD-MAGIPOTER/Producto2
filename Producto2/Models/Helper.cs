@@ -96,5 +96,30 @@ namespace Producto2.Models
             return ListProductos;
         }
 
+        //Buscar por precio
+        public int PrecioN { get;set; }
+        public int PrecioD { get; set; }
+
+        public List<DataProductos_> PrecioProductos()
+        {
+            for (int n = 0; n <= Producto.Productos.Length -1;n++) { 
+                if ((Producto.Productos[n].UnitPrice >= PrecioN) && (Producto.Productos[n].UnitPrice <= PrecioD) ) {
+                    DataProductos_ Pr = new DataProductos_
+                    {
+                        ProductID = Producto.Productos[n].ProductID,
+                        CategoryID = Producto.Productos[n].CategoryID,
+                        ProductName = Producto.Productos[n].ProductName,
+                        UnitPrice = Producto.Productos[n].UnitPrice,
+                        UnitsInStock = Producto.Productos[n].UnitsInStock
+                    };
+                    ListProductos.Add( Pr );
+                }
+
+            }
+            return ListProductos;
+        }
+
+        //Buscar por categoría
+
     }
 }
