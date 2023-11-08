@@ -33,16 +33,16 @@
                                 <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Index.aspx")%>">Inicio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/ProductosRango.aspx")%>">Segundo Enlace</a>
+                                <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/ProductosRango.aspx")%>">Buscar Por Precio</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/CategoriaProd.aspx")%>">Tercer Enlace</a>
+                                <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/CategoriaProd.aspx")%>">Buscar Por categoria</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/UnidadesStock.aspx")%>">Unidades en Stock</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/Paises.aspx")%>">Quinto Enlace</a>
+                                <a class="nav-link enlaces" href="<%=ResolveClientUrl("~/Paginas/Paises.aspx")%>">Paises</a>
                             </li>
                         </ul>
                     </div>
@@ -81,16 +81,16 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="social-icons">
-                                <a href="[Enlace a tu perfil de Facebook]">
+                                <a href="https://www.facebook.com/yuyit0">
                                     <ion-icon name="logo-facebook"></ion-icon>
                                 </a>
-                                <a href="[Enlace a tu perfil de Twitter]">
+                                <a href="#">
                                     <ion-icon name="logo-twitter"></ion-icon>
                                 </a>
-                                <a href="[Enlace a tu perfil de Instagram]">
+                                <a href="https://www.instagram.com/_dadix/">
                                     <ion-icon name="logo-instagram"></ion-icon>
                                 </a>
-                                <a href="[Enlace a tu perfil de LinkedIn]">
+                                <a href="#">
                                     <ion-icon name="logo-linkedin"></ion-icon>
                                 </a>
                             </div>

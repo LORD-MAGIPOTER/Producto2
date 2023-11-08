@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using Producto2.Models.Products;
 
 namespace Producto2.Paginas
 {
@@ -21,7 +20,7 @@ namespace Producto2.Paginas
         {
             if (!IsPostBack)
             {
-                for (int i = 0; i <= 100; i++)
+                for (int i = 0; i <= 40; i++)
                 {
                     DropDownList1.Items.Add(i.ToString());
                 }
@@ -36,8 +35,17 @@ namespace Producto2.Paginas
             try
             {
                 await Hw.ObtenerDatosProductosAsync();
-                ProductoStock.DataSource = Hw.ProductosStock();
-                ProductoStock.DataBind();
+                var filteredProducts = Hw.ProductosStock();
+
+                // Configura el origen de datos del control GridView1 para mostrar los productos filtrados.
+                GridView1.DataSource = filteredProducts.Select(p => new
+                {
+                    ProductID = p.ProductID,
+                    CategoryID = p.CategoryID,
+                    ProductName = p.ProductName,
+                    UnitPrice = p.UnitPrice
+                });
+                GridView1.DataBind();
             }
             catch (Exception)
             {

@@ -81,15 +81,14 @@ namespace Producto2.Models
         public List<DataProductos_> ProductosStock()
         { 
             for (int n = 0;n <= Producto.Productos.Length - 1;n++) {
-                if (Producto.Productos[n].UnitsInStock == DropStock)
+                if (Producto.Productos[n].UnitsInStock >= DropStock)
                 {
                     DataProductos_ Pr = new DataProductos_
                     {
                         ProductID = Producto.Productos[n].ProductID,
                         ProductName = Producto.Productos[n].ProductName,
-                        SupplierID = Producto.Productos[n].SupplierID,
                         CategoryID = Producto.Productos[n].CategoryID,
-                        UnitsInStock = Producto.Productos[n].UnitsInStock
+                        UnitPrice = Producto.Productos[n].UnitPrice
                     };
                     ListProductos.Add( Pr );
                 }
