@@ -114,6 +114,7 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ClienteP.cs" />
     <Compile Include="Models\Helper.cs" />
     <Compile Include="Models\Products.cs" />
     <Compile Include="Paginas\CategoriaProd.aspx.cs">

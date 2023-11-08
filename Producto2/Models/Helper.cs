@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web;
-
+using System.Web.Configuration;
 
 namespace Producto2.Models
 {
@@ -141,7 +141,66 @@ namespace Producto2.Models
             return ListProductos;
         }
 
+        ClienteP Clientes;
         //Aquí inician LAS FUNCIONES PARA EL USO DEL ENDPOINT PARA PAISES
+        public async Task ObtenerDatosClientesAsync()
+        {
+            DirBase = "https://run.mocky.io";
+            string SolicitudClienteURI = "v3/8865f9d9-7b40-4caf-a1c0-bed415440115";
+
+            try
+            {
+                using (var Cliente = new HttpClient(HandlerProducto))
+                {
+                    Cliente.BaseAddress = new Uri(DirBase);
+                    Cliente.DefaultRequestHeaders.Accept.Clear();
+                    Cliente.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/Json"));
+
+                    HttpResponseMessage respuesta = await Cliente.GetAsync($"{SolicitudClienteURI}");
+                    respuesta.EnsureSuccessStatusCode();
+
+                    if (respuesta.IsSuccessStatusCode)
+                    {
+                        var jsoncadena = await respuesta.Content.ReadAsStringAsync();
+                        Clientes = JsonConvert.DeserializeObject<ClienteP>(jsoncadena);
+                    }
+                    else
+                    {
+                        Error = "Se ha producido un error al olicitar el servivio web";
+                        throw new Exception();
+                    }
+                }
+            }
+            catch (HttpRequestException ex)
+            {
+                Error = ex.Message;
+            }
+        }
+
+        public string DropPais { get; set; }
+        
+        List<DataClient> ListClient = new List<DataClient>();
+
+        public List<DataClient> InfoClient()
+        {
+            for (int i = 0;i <= Clientes.Clientes.Length -1; i++)
+            {
+                if (Clientes.Clientes[i].Country == DropPais)
+                {
+                    DataClient Pr = new DataClient()
+                    {
+                        CustomerID = Clientes.Clientes[i].CustomerID,
+                        CompanyName = Clientes.Clientes[i].CompanyName,
+                        Address = Clientes.Clientes[i].Address,
+                        City = Clientes.Clientes[i].City,
+                        Phone = Clientes.Clientes[i].Phone,
+                        Fax = Clientes.Clientes[i].Fax
+                    };
+                    ListClient.Add(Pr);
+                }
+            }
+            return ListClient;
+        }
 
     }
 }
